@@ -93,8 +93,8 @@ async fn main() -> Result<(), ExitFailure> {
   let resp = Forecast::get(&args.city, &args.country_code).await?;
 
   println!(
-    "our city: {}\nour country code: {}\nHumidity: {}%",
-    args.city, args.country_code, resp.main.humidity
+    "our city: {}\nour country code: {}\nHumidity: {}%\nTemperature: {}",
+    args.city, args.country_code, resp.main.humidity, resp.main.temp
   );
   Ok(())
 }
